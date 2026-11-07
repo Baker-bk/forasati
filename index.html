@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="فرصتي - ابحث عن الوظيفة المناسبة لك">
+  <title>فرصتي | الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">ف</span><span>فرصتي</span></a>
+    <button class="menu-toggle" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="index.html">الرئيسية</a><a href="#jobs">الوظائف</a>
+      <a href="saved.html">المحفوظات</a><a href="profile.html">حسابي</a>
+      <span id="authLinks"><a href="login.html">دخول</a><a class="btn btn-small" href="register.html">إنشاء حساب</a></span>
+      <button id="logoutBtn" class="link-btn hidden" onclick="logout()">خروج</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div><span class="eyebrow">خطوتك الأولى نحو مستقبلك</span><h1>وظيفتك القادمة<br><span>تبدأ من هنا</span></h1>
+        <p>اكتشف فرص العمل المناسبة لمهاراتك، وتواصل مع أصحاب العمل بسهولة.</p>
+        <a href="#jobs" class="btn">اكتشف الوظائف <span>←</span></a>
+      </div>
+      <div class="hero-art"><div class="art-card"><div class="art-icon">✓</div><strong>فرص جديدة كل يوم</strong><small>ابحث، قدّم، وابدأ رحلتك المهنية</small><div class="art-lines"><i></i><i></i><i></i></div></div><div class="floating f1">💼 فرصتك أقرب</div><div class="floating f2">✦ مستقبل أفضل</div></div>
+    </div>
+  </section>
+  <section class="container search-panel" id="jobs">
+    <div class="section-heading"><div><span class="eyebrow">ابحث بذكاء</span><h2>اعثر على الوظيفة المناسبة</h2></div><span class="muted">نتائج تناسب طموحك</span></div>
+    <form id="searchForm" class="search-grid">
+      <label>المسمى الوظيفي أو الشركة<input id="searchText" type="search" placeholder="مثال: محاسب، مطور PHP"></label>
+      <label>المدينة<input id="searchCity" type="text" placeholder="مثال: الخرطوم"></label>
+      <label>التصنيف<input id="searchCategory" type="text" placeholder="مثال: تقنية المعلومات"></label>
+      <button class="btn" type="submit">بحث عن وظيفة</button>
+    </form>
+  </section>
+  <section class="container jobs-section">
+    <div class="section-heading"><div><span class="eyebrow">أحدث الفرص</span><h2>وظائف متاحة الآن</h2></div><span id="jobsCount" class="muted"></span></div>
+    <div id="jobsList" class="jobs-grid"><div class="loading">جارٍ تحميل الوظائف...</div></div>
+    <div id="pagination" class="pagination"></div>
+  </section>
+  <section class="cta container"><div><h2>جاهز لخطوتك القادمة؟</h2><p>أنشئ حسابك وابدأ التقديم على الوظائف المناسبة لك.</p></div><a class="btn btn-light" href="register.html">أنشئ حساباً مجاناً</a></section>
+</main>
+<footer><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark">ف</span><span>فرصتي</span></a><p>© <span id="year"></span> فرصتي. جميع الحقوق محفوظة.</p></div></footer>
+</body></html>
