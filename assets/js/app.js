@@ -1,6 +1,6 @@
 
+const API = "https://forasati.ifree.page/api/";
 
-const API = "api/";
 const $ = (s) => document.querySelector(s);
 const esc = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function toggleMenu(){ $("#mainNav")?.classList.toggle("open"); }
