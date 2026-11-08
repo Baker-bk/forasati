@@ -9,17 +9,18 @@
 <body>
 <h2>اختبار الاتصال بقاعدة البيانات</h2>
 <div id="result">جاري الاتصال...</div>
-
 <script>
-fetch("https://forasati.ifree.page/api/jobs.php")
-.then(response => response.text())
-.then(text => {
-  document.getElementById("result").textContent = text;
+fetch("https://forasati.ifree.page/api/cors-test.php")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("result").textContent =
+        JSON.stringify(data);
 })
 .catch(error => {
-  document.getElementById("result").textContent =
-    "فشل الاتصال: " + error.message;
+    document.getElementById("result").textContent =
+        "فشل الاتصال: " + error.message;
 });
 </script>
+
 </body>
 </html>
